@@ -5,6 +5,60 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /**
+   * Directory URL for resolving relative assets.
+   * Avoids new URL(rel, location.href) when the URL is like https://host/repo#section — that drops /repo/ and yields empty 404s for PDFs.
+   * Honors meta[name="portfolio-origin"] (same idea as the canonical script in index.html).
+   */
+  function directoryBaseUrl() {
+    if (typeof window === "undefined" || !window.location) {
+      try {
+        return document.baseURI || "";
+      } catch (e0) {
+        return "";
+      }
+    }
+    if (window.location.protocol === "file:") {
+      return document.baseURI || window.location.href;
+    }
+    var explicit = "";
+    var om = document.querySelector('meta[name="portfolio-origin"]');
+    if (om) explicit = (om.getAttribute("content") || "").trim();
+    var baseInput = explicit || window.location.origin + (window.location.pathname || "/");
+    var u;
+    try {
+      u = new URL(baseInput);
+    } catch (e1) {
+      try {
+        return document.baseURI || window.location.href;
+      } catch (e2) {
+        return window.location.href;
+      }
+    }
+    var path = u.pathname || "/";
+    if (/\.html?$/i.test(path)) {
+      path = path.replace(/\/[^/]+$/, "/");
+    } else if (path !== "/" && !path.endsWith("/")) {
+      path = path + "/";
+    }
+    if (!path.startsWith("/")) path = "/" + path;
+    u.pathname = path.replace(/\/{2,}/g, "/");
+    u.hash = "";
+    u.search = "";
+    return u.href;
+  }
+
+  /** Same-folder asset URL for http(s) and file: — safe with /folder sites and #hash in the address bar */
+  function absoluteAssetUrl(rel) {
+    var clean = (rel || "").replace(/^\.\//, "");
+    if (!clean) return "";
+    try {
+      return new URL(clean, directoryBaseUrl()).href;
+    } catch (err) {
+      return clean;
+    }
+  }
+
   /** Hero: Lottie “hello” — data from hello-animation.data.js (file:// safe) or JSON over http */
   function initHeroLottie() {
     var container = document.getElementById("hero-lottie");
@@ -33,7 +87,7 @@
     if (typeof window.__HERO_LOTTIE_DATA !== "undefined") {
       animOpts.animationData = window.__HERO_LOTTIE_DATA;
     } else {
-      animOpts.path = new URL("assets/lottie/hello-animation.json", document.baseURI || window.location.href).href;
+      animOpts.path = new URL("assets/lottie/hello-animation.json", directoryBaseUrl()).href;
     }
     var anim = lottie.loadAnimation(animOpts);
 
@@ -117,36 +171,9 @@
     if (e.key === "Escape") closeMobileNav();
   });
 
-  /** Same-folder asset URL even when the page is /folder (no trailing slash) — avoids /assets/... 404 */
-  function absoluteAssetUrl(rel) {
-    var clean = (rel || "").replace(/^\.\//, "");
-    if (!clean) return "";
-    if (window.location.protocol === "file:") {
-      try {
-        return new URL(clean, document.baseURI || window.location.href).href;
-      } catch (err) {
-        return clean;
-      }
-    }
-    var path = window.location.pathname || "/";
-    if (/\.html?$/i.test(path)) path = path.replace(/\/[^/]+$/, "/");
-    else if (!path.endsWith("/")) path = path + "/";
-    if (!path.startsWith("/")) path = "/" + path;
-    try {
-      return new URL(clean, window.location.origin + path).href;
-    } catch (err2) {
-      try {
-        return new URL(clean, window.location.href).href;
-      } catch (err3) {
-        return clean;
-      }
-    }
-  }
-
   /**
-   * Hero “Download” → correct PDF URL + native open in new tab (http).
-   * Custom iframe / window.open PDF often shows an empty viewer; the browser handles PDF tabs better by default.
-   * file: — same tab only (new tab + local PDF is unreliable).
+   * Hero résumé PDF: absolute href (hash- and /folder-safe) + optional download filename.
+   * file: — same-tab navigation on plain click (new tab + local PDF is unreliable).
    */
   var resumePdfBtn = document.querySelector(".btn-resume-download");
   if (resumePdfBtn) {
