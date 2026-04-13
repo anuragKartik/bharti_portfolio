@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Optional: set to your canonical site root if auto-detection is wrong (no trailing slash). -->
+  <meta name="portfolio-origin" content="" />
+  <!-- Optional: full GitHub profile URL — shows a GitHub row in Contact and adds to structured data. -->
+  <meta name="github-profile" content="" />
+  <meta name="description" content="Bharti Thakur — Front-end engineer with 3+ years of experience building React, Next.js, TypeScript, and cross-platform apps (RN, Flutter). Real-time dashboards, marketplaces, Node.js APIs, and AWS." />
+  <meta name="keywords" content="React, Next.js, TypeScript, Flutter, React Native, Node.js, AWS, WebSockets, Bharti Thakur" />
+  <meta property="og:title" content="Bharti Thakur — Portfolio" />
+  <meta property="og:description" content="3+ years of experience — high-performance interfaces, real-time trading dashboards, multi-role marketplaces, and full-stack delivery with Node.js, MongoDB, and AWS." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_IN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bharti Thakur — Portfolio" />
+  <meta name="twitter:description" content="3+ years of experience — high-performance interfaces, real-time trading dashboards, multi-role marketplaces, and full-stack delivery with Node.js, MongoDB, and AWS." />
+  <meta name="twitter:image" content="og-image.png" />
+  <meta name="theme-color" content="#0c0907" />
+  <meta name="color-scheme" content="dark" />
+  <title>Bharti Thakur — Portfolio</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <script>
+  (function () {
+    var explicit = "";
+    var originMeta = document.querySelector('meta[name="portfolio-origin"]');
+    if (originMeta) explicit = (originMeta.getAttribute("content") || "").trim();
+    if (!explicit && typeof location !== "undefined" && location.protocol !== "file:") {
+      var p = location.pathname.replace(/index\.html?$/i, "");
+      p = p.replace(/\/+$/, "");
+      explicit = location.origin + (p && p !== "/" ? p : "");
+    }
+    if (!explicit) return;
+    var base = explicit.replace(/\/+$/, "");
+    var canonical = base + "/";
+    var link = document.createElement("link");
+    link.rel = "canonical";
+    link.href = canonical;
+    document.head.appendChild(link);
+    var ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute("content", canonical);
+    var imgAbs = base + "/og-image.png";
+    var ogImg = document.querySelector('meta[property="og:image"]');
+    if (ogImg) ogImg.setAttribute("content", imgAbs);
+    var twImg = document.querySelector('meta[name="twitter:image"]');
+    if (twImg) twImg.setAttribute("content", imgAbs);
+  })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=resume-pdf-3" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Bharti Thakur","email":"bhartithakur9047@gmail.com","telephone":"+916005967663","sameAs":["https://www.linkedin.com/in/bharti-thakur-/"],"jobTitle":"Frontend Engineer","description":"Front-end engineer with 3+ years of experience building production web and mobile interfaces.","knowsAbout":["React","Next.js","TypeScript","Flutter","React Native","Node.js","AWS","WebSockets"],"worksFor":{"@type":"Organization","name":"Webmob Software Solutions"}}
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="mesh-bg" aria-hidden="true"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#hero" class="nav-logo" data-nav-link="hero">Bharti Thakur</a>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#hero" data-nav-link="hero">Home</a></li>
+        <li><a href="#experience" data-nav-link="experience">Experience</a></li>
+        <li><a href="#skills" data-nav-link="skills">Skills</a></li>
+        <li><a href="#projects" data-nav-link="projects">Projects</a></li>
+        <li><a href="#education" data-nav-link="education">Education</a></li>
+        <li><a href="#achievements" data-nav-link="achievements">Achievements</a></li>
+        <li class="nav-links__cta-mobile"><a href="#contact" class="nav-cta" data-nav-link="contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta nav-cta--bar" data-nav-link="contact">Contact</a>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section id="hero" class="hero" tabindex="-1" aria-label="Introduction">
+      <div class="hero-bg">
+        <div class="hero-gradient hero-gradient-1"></div>
+        <div class="hero-gradient hero-gradient-2"></div>
+        <div class="hero-gradient hero-gradient-3"></div>
+        <div class="hero-grid hero-grid--animated"></div>
+        <div class="hero-scanlines" aria-hidden="true"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-layout">
+          <div class="hero-welcome-banner" data-animate>
+            <div class="hero-welcome-banner__frame">
+              <div class="hero-welcome-banner__inner">
+                <div class="hero-welcome-banner__name">
+                  <h1 class="visually-hidden">Bharti Thakur</h1>
+                  <figure class="hero-hello-figure" data-animate aria-hidden="true">
+                    <!-- Hello animation: https://lottiefiles.com/free-animation/hello-animation-fzGRLCXe4T (Lottie Simple License) -->
+                    <div id="hero-lottie" class="hero-lottie"></div>
+                  </figure>
+                </div>
+                <div class="hero-welcome-banner__lead">
+                  <p class="hero-welcome__hello" data-animate><span class="hero-welcome__hi">Hello!</span> <span class="hero-welcome__muted">Nice to meet you.</span></p>
+                  <p class="hero-dynamic-role" data-animate aria-live="polite">
+                    <span class="hero-dynamic-role__prefix">I am a </span>
+                    <span id="hero-rotate-role" class="hero-dynamic-role__highlight">software engineer</span><span class="hero-dynamic-role__period" aria-hidden="true">.</span>
+                  </p>
+                  <div class="hero-welcome-banner__rule" aria-hidden="true"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-copy">
+            <p class="hero-elevator" data-animate>
+              I build <strong>responsive, user-centric interfaces</strong> with React, Next.js, TypeScript, Flutter, and React Native — from <strong class="em em--violet">real-time trading dashboards</strong> to <strong class="em em--green">multi-role marketplaces</strong>, with strong attention to <strong>load speed</strong>, <strong>scalable UI architecture</strong>, and <strong>Agile delivery</strong>.
+            </p>
+            <p class="hero-tagline" data-animate>
+              <strong class="em em--warm">3+ years of experience</strong> shipping production web and mobile. Experienced with WebSockets, data visualization, and <strong>Node.js</strong> integrations; comfortable with <strong>AWS</strong> deployments and backend collaboration.
+            </p>
+            <div class="hero-stats" data-animate aria-label="Résumé">
+              <div class="hero-recruiter-cta" data-animate>
+                <a
+                  href="https://docs.google.com/document/d/1L9q1IS0UYAk7ahJW1ZdcPp7ljrmKtExV2WmL81OILPA/edit"
+                  class="btn btn-resume"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open résumé in Google Docs (new tab)"
+                >
+                  <svg class="btn-resume__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                    <path d="M14 2v6h6"/>
+                    <path d="M8 13h8"/>
+                    <path d="M8 17h8"/>
+                    <path d="M8 9h2"/>
+                  </svg>
+                  <span class="btn-resume__text">
+                    <span class="btn-resume__title">Résumé</span>
+                  </span>
+                </a>
+                <a
+                  href="assets/pdf/Resume.pdf"
+                  class="btn btn-outline btn-resume-download"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  type="application/pdf"
+                  title="Opens your résumé PDF in a new tab (this tab if you opened the site from disk)."
+                  aria-label="Open résumé PDF in a new tab"
+                >
+                  <svg class="btn-resume-download__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" x2="12" y1="15" y2="3"/>
+                  </svg>
+                  <span class="btn-resume-download__label">Download</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="hero-aside">
+            <aside class="hero-terminal" aria-label="Developer snippet">
+              <div class="dev-window" data-animate>
+                <div class="dev-window__chrome">
+                  <span class="dev-window__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <span class="dev-window__title">portfolio.tsx</span>
+                  <span class="dev-window__badge">TS</span>
+                </div>
+                <pre class="dev-window__code"><code><span class="tok-k">export const</span> <span class="tok-fn">profile</span> <span class="tok-k">=</span> <span class="tok-p">{</span>
+  <span class="tok-p">name:</span> <span class="tok-s">'Bharti Thakur'</span><span class="tok-p">,</span>
+  <span class="tok-p">focus:</span> <span class="tok-p">[</span><span class="tok-s">'UI'</span><span class="tok-p">,</span> <span class="tok-s">'real-time'</span><span class="tok-p">,</span> <span class="tok-s">'mobile'</span><span class="tok-p">],</span>
+  <span class="tok-p">stack:</span> <span class="tok-p">[</span><span class="tok-s">'React'</span><span class="tok-p">,</span> <span class="tok-s">'Next'</span><span class="tok-p">,</span> <span class="tok-s">'Backend'</span><span class="tok-p">,</span> <span class="tok-s">'AWS'</span><span class="tok-p">],</span>
+  <span class="tok-p">experience:</span> <span class="tok-s">'3+ yrs'</span><span class="tok-p">,</span>
+<span class="tok-p">}</span> <span class="tok-k">as const</span><span class="tok-cursor" aria-hidden="true"></span></code></pre>
+              </div>
+              <ul class="hero-tech-strip" data-animate aria-label="Core technologies">
+                <li>React</li>
+                <li>Next.js</li>
+                <li>TypeScript</li>
+                <li>Backend</li>
+                <li>React Native</li>
+                <li>Flutter</li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </div>
+      <div class="hero-bottom-cue">
+        <a href="#experience" class="hero-scroll" aria-label="Scroll to experience section">
+          <span class="scroll-line" aria-hidden="true"></span>
+          <span class="hero-scroll-label">Explore</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="experience" class="section experience">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2 class="section-title">
+            <span class="section-title-text">Experience</span>
+            <span class="section-title-line"></span>
+          </h2>
+          <p class="section-lead">Client work across <span class="em em--cyan">fintech dashboards</span>, <span class="em em--violet">marketplaces</span>, <span class="em em--blue">mobile apps</span>, and <span class="em em--green">full-stack features</span> — shipping with design, product, and backend.</p>
+        </header>
+        <div class="timeline">
+          <article class="timeline-item timeline-item--spotlight reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card timeline-card--spotlight">
+              <div class="exp-spotlight">
+                <header class="exp-spotlight__header">
+                  <h3 class="exp-spotlight__title">Webmob Software Solutions</h3>
+                  <div class="exp-spotlight__meta">
+                    <span class="exp-spotlight__role">Software Engineer</span>
+                    <span class="exp-spotlight__dot" aria-hidden="true"></span>
+                    <time class="exp-spotlight__dates" datetime="2023-01">Jan 2023</time>
+                    <span class="exp-spotlight__range" aria-hidden="true">→</span>
+                    <span class="exp-spotlight__now">Present</span>
+                  </div>
+                </header>
+                <p class="exp-spotlight__lede">
+                  I partner with product and design to ship client work end to end — from dense trading desks to marketplace checkout and cross‑platform apps — with the same bar: <strong class="em em--cyan">clarity under load</strong>, <strong class="em em--violet">trust at payment</strong>, and <strong class="em em--green">UI systems others can extend</strong>.
+                </p>
+                <ul class="exp-spotlight__lanes" aria-label="Work focus areas">
+                  <li class="exp-lane">
+                    <span class="exp-lane__index" aria-hidden="true">01</span>
+                    <div class="exp-lane__body">
+                      <h4 class="exp-lane__title">Web development</h4>
+                      <p class="exp-lane__copy">Browser‑first product: Mondeum, Defi, Instimatch for live trading and analytics; EduSource, Cashdillo, Ifyuu for multi‑role marketplaces; plus marketing and CMS sites. Built with React/Next patterns, WebSockets, Highcharts/D3, and performance work — lazy loading, code splitting, and reusable UI modules.</p>
+                    </div>
+                  </li>
+                  <li class="exp-lane">
+                    <span class="exp-lane__index" aria-hidden="true">02</span>
+                    <div class="exp-lane__body">
+                      <h4 class="exp-lane__title">App development</h4>
+                      <p class="exp-lane__copy">Cross‑platform clients for real operations — COUNTR and TOPPAN for ordering, inventory, and day‑to‑day flows, with Stripe and Wallee where Swiss payments matter. Focus on dependable offline‑ish UX, clear state, and handoff to APIs the web team also consumes.</p>
+                    </div>
+                  </li>
+                  <li class="exp-lane">
+                    <span class="exp-lane__index" aria-hidden="true">03</span>
+                    <div class="exp-lane__body">
+                      <h4 class="exp-lane__title">Backend</h4>
+                      <p class="exp-lane__copy">COUNTR service layer: Node.js/Express, MongoDB, Redis, webhooks, and AWS‑backed deployments so mobile and web stay in sync. REST shapes that match how the apps actually load data, plus operational concerns like retries and observability in practice.</p>
+                    </div>
+                  </li>
+                  <li class="exp-lane">
+                    <span class="exp-lane__index" aria-hidden="true">04</span>
+                    <div class="exp-lane__body">
+                      <h4 class="exp-lane__title">Product &amp; platform</h4>
+                      <p class="exp-lane__copy">Specialized products that sit between UX and policy — e.g. BEME for moderation: media matching, scoring, and appeal flows for verification teams. Also the cross‑cutting glue: role‑aware journeys, campaign tooling, and integrations where web, mobile, and services have to agree on one source of truth.</p>
+                    </div>
+                  </li>
+                </ul>
+                <div class="exp-spotlight__foot" aria-label="Themes across projects">
+                  <span class="exp-chip">Web &amp; dashboards</span>
+                  <span class="exp-chip">Mobile apps</span>
+                  <span class="exp-chip">APIs &amp; cloud</span>
+                  <span class="exp-chip">Product workflows</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="timeline-item reveal reveal-delay-1">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <h3>Graphmallo Technologies LLP</h3>
+                <span class="timeline-role">Software Development Engineer Intern</span>
+                <time class="timeline-date">Jun 2021 – Aug 2021</time>
+              </div>
+              <div class="timeline-card-body">
+                <ul>
+                  <li>Conducted data gathering through web scraping and pre-processing to produce clean, structured datasets for analysis.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2 class="section-title">
+            <span class="section-title-text">Skills</span>
+            <span class="section-title-line"></span>
+          </h2>
+          <p class="section-lead">A quick look at <span class="em em--cyan">what I build on real projects</span>, then the <span class="em em--violet">tools and tech</span> I use.</p>
+        </header>
+        <div class="skills-shipped-block reveal" role="region" aria-labelledby="skills-shipped-title">
+          <div class="skills-shipped-block__head">
+            <h3 id="skills-shipped-title" class="skills-shipped-block__title">Highlights</h3>
+            <p class="skills-shipped-block__note">Themes that come up again and again on long‑running client builds.</p>
+          </div>
+          <div class="skills-shipped-grid">
+            <article class="skills-shipped">
+              <h4 class="skills-shipped__name">Live trading &amp; analytics surfaces</h4>
+              <p class="skills-shipped__metric"><span class="skills-shipped__metric-value">3+ yrs</span> <span class="skills-shipped__metric-sep" aria-hidden="true">·</span> WebSockets + Highcharts/D3</p>
+              <p class="skills-shipped__copy">P&amp;L and execution-style views for Mondeum-class desks — tick-driven updates without full-page reloads, and chart modules structured so the next similar client reuses instead of reinvents.</p>
+            </article>
+            <article class="skills-shipped">
+              <h4 class="skills-shipped__name">Multi‑role marketplace flows</h4>
+              <p class="skills-shipped__metric"><span class="skills-shipped__metric-value">3+ personas</span> <span class="skills-shipped__metric-sep" aria-hidden="true">·</span> one product surface</p>
+              <p class="skills-shipped__copy">EduSource, Cashdillo, Ifyuu-style builds: payments, campaigns, and journeys where students, admins, and suppliers each see the right controls, state, and guardrails.</p>
+            </article>
+            <article class="skills-shipped">
+              <h4 class="skills-shipped__name">Web + mobile on the same contract</h4>
+              <p class="skills-shipped__metric"><span class="skills-shipped__metric-value">Node/Express</span> <span class="skills-shipped__metric-sep" aria-hidden="true">·</span> MongoDB · Redis · AWS</p>
+              <p class="skills-shipped__copy">COUNTR-style stacks: REST + webhooks powering RN/Flutter ordering and ops UIs — fewer “works on web, breaks on device” mismatches because the API is the single source of truth.</p>
+            </article>
+          </div>
+        </div>
+        <h3 class="skills-toolbox-heading reveal">Technologies</h3>
+        <p class="skills-toolbox-lead reveal">Frameworks, libraries, and practices I use across frontend, backend, and cloud.</p>
+        <div class="skills-grid">
+          <div class="skill-category reveal">
+            <h4 class="skill-category-title">Frontend</h4>
+            <ul class="skill-tags">
+              <li>React</li><li>Next.js</li><li>Flutter</li><li>React Native</li><li>JavaScript</li><li>TypeScript</li><li>HTML5</li><li>CSS3</li><li>Redux</li><li>MUI</li><li>Highcharts</li><li>D3.js</li><li>PrimeReact</li><li>WebSockets</li><li>UI/UX Principles</li><li>State Management</li><li>Jest</li>
+            </ul>
+          </div>
+          <div class="skill-category reveal reveal-delay-1">
+            <h4 class="skill-category-title">Backend</h4>
+            <ul class="skill-tags">
+              <li>Node.js</li><li>Express.js</li><li>REST API Development</li><li>MongoDB</li>
+            </ul>
+          </div>
+          <div class="skill-category reveal reveal-delay-2">
+            <h4 class="skill-category-title">Cloud &amp; Tools</h4>
+            <ul class="skill-tags">
+              <li>AWS</li><li>Git</li><li>Agile/Scrum</li><li>Performance Optimization</li><li>Cross-Browser Compatibility</li>
+            </ul>
+          </div>
+          <div class="skill-category reveal reveal-delay-3">
+            <h4 class="skill-category-title">Soft Skills</h4>
+            <ul class="skill-tags">
+              <li>Problem Solving</li><li>Collaboration</li><li>Communication</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2 class="section-title">
+            <span class="section-title-text">My Projects</span>
+            <span class="section-title-line"></span>
+          </h2>
+          <p class="section-lead">Course commerce, B2B marketplace, and gifting e-commerce — each focused on <span class="em em--warm">navigation</span>, <span class="em em--rose">trust</span>, and <span class="em em--cyan">checkout</span>.</p>
+        </header>
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-card-inner">
+              <h3>Skill Aura</h3>
+              <p>Educational course-selling platform with intuitive UI and <span class="em em--green">secure payments</span> — <span class="em em--cyan">clearer navigation</span> and a smoother checkout path.</p>
+            </div>
+          </article>
+          <article class="project-card reveal reveal-delay-1">
+            <div class="project-card-inner">
+              <h3>Modern Packager</h3>
+              <p>B2B packaging marketplace built for <span class="em em--violet">fast transactions</span>, <span class="em em--blue">streamlined ordering</span>, and efficient supplier–buyer workflows.</p>
+            </div>
+          </article>
+          <article class="project-card reveal reveal-delay-2">
+            <div class="project-card-inner">
+              <h3>ClickOkart</h3>
+              <p>E-commerce gifting experience with <span class="em em--cyan">advanced product filtering</span>, <span class="em em--warm">performance-minded UI</span>, and a <span class="em em--green">secure checkout</span> flow.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section education">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2 class="section-title">
+            <span class="section-title-text">Education</span>
+            <span class="section-title-line"></span>
+          </h2>
+          <p class="section-lead"><span class="em em--violet">B.E.</span> from CCET (Panjab University), with <span class="em em--blue">intermediate</span> and <span class="em em--green">matriculation</span> records below.</p>
+        </header>
+        <div class="education-list">
+          <div class="edu-item reveal">
+            <span class="edu-degree">B.E., Computer Science &amp; Engineering</span>
+            <span class="edu-school">Chandigarh College of Engineering and Technology, Panjab University</span>
+            <span class="edu-meta">2023 · CGPA 8.81</span>
+          </div>
+          <div class="edu-item reveal reveal-delay-1">
+            <span class="edu-degree">Intermediate</span>
+            <span class="edu-school">Govt. Higher Secondary School, Mubarak Mandi, Jammu</span>
+            <span class="edu-meta">2019 · 94.2%</span>
+          </div>
+          <div class="edu-item reveal reveal-delay-2">
+            <span class="edu-degree">Matriculation</span>
+            <span class="edu-school">New Era Environmental High School, Jammu</span>
+            <span class="edu-meta">2017 · 95%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements" class="section achievements">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2 class="section-title">
+            <span class="section-title-text">Achievements &amp; Leadership</span>
+            <span class="section-title-line"></span>
+          </h2>
+          <p class="section-lead"><span class="em em--warm">Campus leadership</span>, placements outreach, <span class="em em--cyan">competitions</span>, and <span class="em em--rose">fest operations</span>.</p>
+        </header>
+        <ul class="achievements-list reveal">
+          <li><strong>Public Relations Head</strong>, Training &amp; Placement Cell — outreach, recruiter liaison, placement drive coordination, and corporate workshop organization</li>
+          <li><strong>Maintenance Committee Head</strong>, Girls Hostel — facilities management, resident welfare, and infrastructure coordination</li>
+          <li><strong>Class Representative</strong>, CSE 2019 — student–faculty liaison and academic coordination</li>
+          <li><strong>Executive Member</strong>, AOS Debating Club — public speaking, event organization, and student mentorship</li>
+          <li><strong>Smart India Hackathon 2022</strong> — 5th position · <strong>EICT IIT Kanpur Quiz</strong> — 4th rank</li>
+          <li><strong>Website Head</strong>, Annual Fest — event management and digital content coordination</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2 class="section-title">
+            <span class="section-title-text">Contact</span>
+            <span class="section-title-line"></span>
+          </h2>
+          <p class="section-lead section-lead--contact">I reply fastest on <span class="em em--cyan">email</span> and <span class="em em--violet">LinkedIn</span>.</p>
+        </header>
+        <div class="contact-links">
+          <div class="contact-row reveal">
+            <a href="mailto:bhartithakur9047@gmail.com" class="contact-link">
+              <span class="contact-link-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+              </span>
+              <span class="contact-link-text">bhartithakur9047@gmail.com</span>
+            </a>
+            <button type="button" class="contact-copy" data-copy="bhartithakur9047@gmail.com" data-toast="Email copied" aria-label="Copy email address">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </button>
+          </div>
+          <div class="contact-row reveal reveal-delay-1">
+            <a href="tel:+916005967663" class="contact-link">
+              <span class="contact-link-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </span>
+              <span class="contact-link-text">+91 6005967663</span>
+            </a>
+            <button type="button" class="contact-copy" data-copy="+916005967663" data-toast="Phone number copied" aria-label="Copy phone number">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </button>
+          </div>
+          <div class="contact-row reveal reveal-delay-2">
+            <a href="https://www.linkedin.com/in/bharti-thakur-/" target="_blank" rel="noopener noreferrer" class="contact-link">
+              <span class="contact-link-icon contact-link-icon--in" aria-hidden="true">in</span>
+              <span class="contact-link-text">https://www.linkedin.com/in/bharti-thakur-/</span>
+            </a>
+            <button type="button" class="contact-copy" data-copy="https://www.linkedin.com/in/bharti-thakur-/" data-toast="LinkedIn URL copied" aria-label="Copy LinkedIn profile URL">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner container">
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+          <li><a href="#hero" data-nav-link="hero">Home</a></li>
+          <li><a href="#experience" data-nav-link="experience">Experience</a></li>
+          <li><a href="#skills" data-nav-link="skills">Skills</a></li>
+          <li><a href="#projects" data-nav-link="projects">Projects</a></li>
+          <li><a href="#education" data-nav-link="education">Education</a></li>
+          <li><a href="#achievements" data-nav-link="achievements">Achievements</a></li>
+          <li><a href="#contact" data-nav-link="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <p class="footer-copy">© <span id="year"></span> Bharti Thakur. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="assets/lottie/hello-animation.data.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" integrity="sha384-J8C0MvgX4WP58J4N2W99vCKd2J6z99ynOJ5bEfE6jeP7kVTW1drYtv/jzrxM5jbm" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+  <script src="script.js?v=resume-pdf-native-1" defer></script>
+</body>
+</html>
